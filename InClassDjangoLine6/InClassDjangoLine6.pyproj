@@ -29,13 +29,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="accounts\admin.py" />
-    <Compile Include="accounts\apps.py" />
-    <Compile Include="accounts\migrations\__init__.py" />
-    <Compile Include="accounts\models.py" />
-    <Compile Include="accounts\tests.py" />
-    <Compile Include="accounts\views.py" />
-    <Compile Include="accounts\__init__.py" />
+    <Compile Include="account\admin.py" />
+    <Compile Include="account\apps.py" />
+    <Compile Include="account\migrations\__init__.py" />
+    <Compile Include="account\models.py" />
+    <Compile Include="account\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="account\tests.py" />
+    <Compile Include="account\views.py" />
+    <Compile Include="account\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="InClassDjangoLine6\__init__.py" />
     <Compile Include="InClassDjangoLine6\settings.py" />
@@ -52,16 +55,16 @@
   <ItemGroup>
     <Content Include="MyApp1\static\images\logo.png" />
     <Content Include="MyApp1\static\site.css" />
-    <Content Include="MyApp1\templates\MyApp1\base.html" />
+    <Content Include="MyApp1\templates\MyApp1\about.html" />
     <Content Include="MyApp1\templates\MyApp1\index.html" />
     <Content Include="MyApp1\templates\MyApp1\home.html" />
-    <Content Include="MyApp1\templates\registration\dashboard.html" />
-    <Content Include="MyApp1\templates\registration\Login.html" />
+    <Content Include="MyApp1\templates\dashboard.html" />
+    <Content Include="MyApp1\templates\registration\login.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="accounts\" />
-    <Folder Include="accounts\migrations\" />
+    <Folder Include="account\" />
+    <Folder Include="account\migrations\" />
     <Folder Include="InClassDjangoLine6\" />
     <Folder Include="MyApp1\" />
     <Folder Include="MyApp1\migrations\" />

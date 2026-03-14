@@ -29,9 +29,8 @@ Including another URLconf
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path("accounts/", include('accounts.urls')),
+    path('account/', include('account.urls')),
     # Uncomment the next line to enable the admin:
-    #path('admin/', admin.site.urls)
     re_path(r'^$', MyApp1.views.index, name='index'),
     re_path(r'^home$', MyApp1.views.home, name ='home')
 ]
