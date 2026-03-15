@@ -19,10 +19,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="{% url 'home' %}" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Account</a>
             <a class="nav-item nav-link" href="#">Help</a>
-            <a class="nav-item nav-link" href="#">LogOut</a>
+            <a class="{% url 'logout' %}" href="#">LogOut</a>
         </div>
     </div>
 </nav>
@@ -34,26 +34,7 @@
 <html>
 
 <body>
-
-    <strong>Teachers</strong>
-
-    {% if content %}
-    <table>
-        <tr>
-            <th> Name </th>
-            <th>Teaching Area</th>
-        </tr>
-        {% for teach in content%}
-        <tr>
-            <td>{{teach.Name}}</td>
-            <td>{{teach.Area}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% else %}
-    <strong>No data!!</strong>
-    {% endif %}
-
+    <p>Logged in as: {{request.user.username}} </p>
 
 </body>
 </html>

@@ -17,4 +17,3 @@ def home(request):
 def about(request):
     teach = teacher.objects.all()
     return render(request, "MyApp1/about.html")
-    return HttpResponse("This is the home page")
