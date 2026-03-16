@@ -31,6 +31,7 @@ urlpatterns = [
     path('admin', admin.site.urls),
     path('account/', include('account.urls')),
     # Uncomment the next line to enable the admin:
-    re_path(r'', MyApp1.views.index, name='index'),
-    re_path(r'home/', MyApp1.views.home, name ='home')
+    path('', MyApp1.views.index, name='index'),
+    path('home/', MyApp1.views.home, name ='home'),
+    path('input', MyApp1.views.input_view, name='input')
 ]
